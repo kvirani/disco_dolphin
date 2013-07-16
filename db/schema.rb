@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130712150601) do
+ActiveRecord::Schema.define(:version => 20130715143405) do
 
   create_table "genres", :force => true do |t|
     t.string   "name"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20130712150601) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.boolean  "playing"
   end
 
   add_index "playlists", ["user_id"], :name => "index_playlists_on_user_id"

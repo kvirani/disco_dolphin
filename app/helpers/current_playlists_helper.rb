@@ -1,0 +1,2 @@
+module CurrentPlaylistsHelper
+end

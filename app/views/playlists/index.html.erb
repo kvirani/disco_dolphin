@@ -1,0 +1,14 @@
+
+<% if @current_playlist %>
+	<h1>Currently Playing</h1>
+	<%= @current_playlist.name %>
+<% end %>
+
+<h1>Your Playlists</h1>
+
+<% @playlists.each do |playlist| %>
+	<div>
+		<h2><%= link_to playlist.name, playlist %></h2>
+		<%= link_to 'Play', '#' %> | <%= link_to 'Delete', '#', :method => :delete %>
+	</div>
+<% end %>

@@ -22,3 +22,4 @@ Song.create! title: "Lovers in a dangerous time",
   artist_name: "Barenaken Ladies",
   album_name: "Some people really care",
   genre: Genre.where(name: 'Pop').first
+

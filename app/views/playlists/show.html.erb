@@ -1,0 +1,9 @@
+<h1><%= @playlist.name %></h1>
+<%= link_to 'Back to Playlists', playlists_path %>
+
+<% @playlist.items.each do |item| %>
+	<div>
+		<%= item.song.title %> by <%= item.song.artist_name %>
+		<%= link_to '[X]', playlist_item_path(@playlist, item), :method => :delete %>
+	</div>
+<% end %>
